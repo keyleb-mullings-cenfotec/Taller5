@@ -1,5 +1,6 @@
 const TableBody = (props) => {
     const characters = props.characters.map((char, index) => {
+
         return (
             <tr key={index}>
                 <td>
@@ -7,6 +8,11 @@ const TableBody = (props) => {
                 </td>
                 <td>
                     {char.job}
+                </td>
+                <td>
+                    <button
+                        onClick={() => props.removeCharacter(index)}
+                    >Delete</button>
                 </td>
             </tr>
         );
